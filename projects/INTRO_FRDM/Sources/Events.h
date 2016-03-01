@@ -1,11 +1,11 @@
 /* ###################################################################
 **     Filename    : Events.h
-**     Project     : FRDM
+**     Project     : FS2016_FRDM
 **     Processor   : MKL25Z128VLK4
 **     Component   : Events
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-02-29, 09:21, # CodeGen: 0
+**     Date/Time   : 2016-02-23, 11:20, # CodeGen: 0
 **     Abstract    :
 **         This is user's event module.
 **         Put your event handler code here.
@@ -33,6 +33,13 @@
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
+#include "LEDPin1.h"
+#include "BitIoLdd4.h"
+#include "LEDPin2.h"
+#include "BitIoLdd5.h"
+#include "LEDPin3.h"
+#include "BitIoLdd6.h"
+#include "WAIT1.h"
 
 #ifdef __cplusplus
 extern "C" {
