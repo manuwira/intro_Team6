@@ -13,6 +13,8 @@
 #include "Platform_Local.h" /* local project configuration, present in each project (FRDM, Robot) */
 
 /* check local platform configuration */
+#define PL_CONFIG_HAS_EVENTS		(1)
+
 #if PL_LOCAL_CONFIG_BOARD_IS_ROBO
   #define PL_CONFIG_BOARD_IS_FRDM   (0)
   #define PL_CONFIG_BOARD_IS_ROBO   (1)

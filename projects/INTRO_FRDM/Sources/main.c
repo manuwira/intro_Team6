@@ -37,6 +37,8 @@
 #include "LEDPin3.h"
 #include "BitIoLdd6.h"
 #include "WAIT1.h"
+#include "CS1.h"
+#include "HF1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -54,7 +56,7 @@ int main(void)
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
   /*** End of Processor Expert internal initialization.                    ***/
-
+  CS1_CriticalVariable()
   APP_Start();
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

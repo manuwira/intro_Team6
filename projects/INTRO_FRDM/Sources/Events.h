@@ -40,6 +40,8 @@
 #include "LEDPin3.h"
 #include "BitIoLdd6.h"
 #include "WAIT1.h"
+#include "CS1.h"
+#include "HF1.h"
 
 #ifdef __cplusplus
 extern "C" {
