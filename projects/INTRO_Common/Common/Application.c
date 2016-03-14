@@ -9,17 +9,19 @@
 #include "Application.h"
 #include "LED.h"
 #include "WAIT1.h"
+#include "CS1.h"
 
 void APP_Start(void) {
+  CS1_CriticalVariable();
+
   PL_Init();
+
   /* init: turn off */
   for(;;) {
-    LED1_Neg();
-    WAIT1_Waitms(100);
-    LED2_Neg();
-    WAIT1_Waitms(100);
-    LED3_Neg();
-    WAIT1_Waitms(100);
+   // CS1_EnterCritical();
+    //LED1_Neg();
+    //CS1_ExitCritical();
+    WAIT1_Waitms(500);
   }
 
   for(;;) {

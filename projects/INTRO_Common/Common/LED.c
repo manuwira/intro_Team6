@@ -7,7 +7,7 @@
 
 
 #include "Platform.h"
-#if PL_CONFIG_HAS_LED
+#if PL_CONFIG_HAS_LEDS
 #include "LED.h"
 
 static void LED_Test(void) {
@@ -29,36 +29,27 @@ static void LED_Test(void) {
 
 
 void LED_Init(void) {
-#if PL_CONFIG_NOF_LED>=1
   LED1_Off();
-#endif
-#if PL_CONFIG_NOF_LED>=2
   LED2_Off();
-#endif
-#if PL_CONFIG_NOF_LED>=3
   LED3_Off();
-#endif
-#if PL_CONFIG_NOF_LED>=4
-  #error "only 3 LEDs supported"
-#endif
 #if PL_CONFIG_TEST_DRIVERS
   LED_Test();
 #endif
 }
 
 void LED_Deinit(void) {
-#if PL_CONFIG_NOF_LED>=1
+#if PL_CONFIG_NOF_LEDS>=1
   LED1_Off();
 #endif
-#if PL_CONFIG_NOF_LED>=2
+#if PL_CONFIG_NOF_LEDS>=2
   LED2_Off();
 #endif
-#if PL_CONFIG_NOF_LED>=3
+#if PL_CONFIG_NOF_LEDS>=3
   LED3_Off();
 #endif
-#if PL_CONFIG_NOF_LED>=4
+#if PL_CONFIG_NOF_LEDS>=4
   #error "only 3 LEDs supported"
 #endif
 }
 
-#endif /* PL_CONFIG_HAS_LED */
+#endif /* PL_CONFIG_HAS_LEDS */

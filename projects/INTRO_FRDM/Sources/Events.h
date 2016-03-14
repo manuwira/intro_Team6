@@ -34,14 +34,36 @@
 #include "PE_Const.h"
 #include "IO_Map.h"
 #include "LEDPin1.h"
-#include "BitIoLdd4.h"
+#include "BitIoLdd1.h"
 #include "LEDPin2.h"
-#include "BitIoLdd5.h"
+#include "BitIoLdd2.h"
 #include "LEDPin3.h"
-#include "BitIoLdd6.h"
+#include "BitIoLdd3.h"
 #include "WAIT1.h"
 #include "CS1.h"
 #include "HF1.h"
+#include "KSDK1.h"
+#include "TI1.h"
+#include "TimerIntLdd1.h"
+#include "TU1.h"
+#include "SW1.h"
+#include "ExtIntLdd1.h"
+#include "SW2.h"
+#include "ExtIntLdd2.h"
+#include "SW3.h"
+#include "ExtIntLdd3.h"
+#include "SW4.h"
+#include "ExtIntLdd4.h"
+#include "SW5.h"
+#include "BitIoLdd8.h"
+#include "SW6.h"
+#include "BitIoLdd9.h"
+#include "SW7.h"
+#include "ExtIntLdd5.h"
+#include "AD1.h"
+#include "AdcLdd1.h"
+//#include "GI2C1.h"
+//#include "CI2C1.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -62,6 +84,92 @@ extern "C" {
 /* ===================================================================*/
 void Cpu_OnNMIINT(void);
 
+
+void SW7_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  SW7_OnInterrupt (module Events)
+**
+**     Component   :  SW7 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void SW4_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  SW4_OnInterrupt (module Events)
+**
+**     Component   :  SW4 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void SW3_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  SW3_OnInterrupt (module Events)
+**
+**     Component   :  SW3 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void SW2_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  SW2_OnInterrupt (module Events)
+**
+**     Component   :  SW2 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void SW1_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  SW1_OnInterrupt (module Events)
+**
+**     Component   :  SW1 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+/*
+** ===================================================================
+**     Event       :  TI1_OnInterrupt (module Events)
+**
+**     Component   :  TI1 [TimerInt]
+**     Description :
+**         When a timer interrupt occurs this event is called (only
+**         when the component is enabled - <Enable> and the events are
+**         enabled - <EnableEvent>). This event is enabled only if a
+**         <interrupt service/event> is enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void TI1_OnInterrupt(void);
 
 /* END Events */
 
